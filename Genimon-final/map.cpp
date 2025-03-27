@@ -15,10 +15,10 @@ Map::Map(QWidget* parent)
 
     // Création du bonhomme (cone.png)
     joueur = new Joueur(5, 5, this);
-    QPixmap sprite(":/Image_Qt/Chimie/Erlenmeyer_test.jpg");  // assure-toi que le .qrc contient cette ressource
-    joueur->setPixmap(sprite.scaled(32, 32, Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    joueur->setGeometry(joueurX, joueurY, 32, 32);
-    joueur->show();
+    //QPixmap sprite(":/Image_Qt/Chimie/Erlenmeyer_test.jpg");  // assure-toi que le .qrc contient cette ressource
+    //joueur->setPixmap(sprite.scaled(32, 32, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    //joueur->setGeometry(joueurX, joueurY, 32, 32);
+    //joueur->show();
 
     setFocusPolicy(Qt::StrongFocus); // Permet de capter les touches
     setFocus();

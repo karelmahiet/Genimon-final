@@ -32,7 +32,7 @@ class Joueur : public QLabel
 {
 	Q_OBJECT
 public:
-	Joueur(int x0 = 10, int y0 = 10, QWidget* parent = nullptr);
+	explicit Joueur(int x0 = 10, int y0 = 10, QWidget* parent = nullptr);
 	~Joueur();
 
 	void afficherPartie();
@@ -63,6 +63,7 @@ public:
 	int anciennePosition_y;
 	Vecteur<Genimon*> listeGenimons;
 	string nom;
+
 
 	//Séparation en entre les deux terrains
 	int borne_x_min;
