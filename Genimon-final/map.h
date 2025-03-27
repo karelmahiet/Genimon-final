@@ -2,9 +2,11 @@
 #define MAP_H
 
 #include <QWidget>
+#include <QLabel>
+#include <QKeyEvent>
 
 namespace Ui {
-class Map;
+    class Map;
 }
 
 class Map : public QWidget
@@ -12,17 +14,19 @@ class Map : public QWidget
     Q_OBJECT
 
 public:
-    explicit Map(QWidget *parent = nullptr);
+    explicit Map(QWidget* parent = nullptr);
     ~Map();
 
-public slots:
     void handleKeyPress(int key);
 
-private:
-    Ui::Map *ui;
+protected:
+    void keyPressEvent(QKeyEvent* event) override;
 
-signals:
-    void requestMenuChange(int index);  // Signal pour demander un changement de menu
+private:
+    Ui::Map* ui;
+    QLabel* joueur;
+    int joueurX;
+    int joueurY;
 };
 
 #endif // MAP_H

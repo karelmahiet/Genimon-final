@@ -38,8 +38,7 @@ Controle::Controle(QWidget *parent)
     }
     Map* mapMenu = qobject_cast<Map*>(stackedWidget->widget(2));
     if (mapMenu) {
-        connect(this, &Controle::sendKeyPress, mapMenu, &Map::handleKeyPress);
-        connect(mapMenu, &Map::requestMenuChange, this, &Controle::changeMenu);
+ 
     }
     Capture* captureMenu = qobject_cast<Capture*>(stackedWidget->widget(3));
     if (captureMenu) {

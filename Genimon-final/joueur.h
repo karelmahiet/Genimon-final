@@ -11,6 +11,7 @@
 #include <chrono>
 #include <conio.h>
 #include <cstdlib>
+#include <qlabel.h>
 using namespace std;
 
 #define dimensionTerrain_x 37
@@ -27,16 +28,19 @@ struct genimonChoisi
 	int indexJ = 0;
 };
 
-class Joueur
+class Joueur : public QLabel
 {
+	Q_OBJECT
 public:
-	Joueur(int x0 = 10, int y0 = 10);
+	Joueur(int x0 = 10, int y0 = 10, QWidget* parent = nullptr);
 	~Joueur();
+
 	void afficherPartie();
 	void afficherMenuPrincipal();
 	void afficherMenuGeniedex(bool afficherObjets);
 	void creerTerrain();
 	void initialiserJoueur(int pos_x, int pos_y);
+	void deplacerJoueur(char direction);
 	void changerTerrain();
 	void consulterGenidexPartiel(int type);
 	void consulterGenidexComplet();
@@ -66,6 +70,8 @@ public:
 	int borne_x_max;
 	int borne_y_max;
 private:
+	QLabel* spriteJoueur;  //image du joueur
+	QPixmap imageJoueur;   //ressource image
 	char terrain[dimensionTerrain_x][dimensionTerrain_y];
 	caseGenidex genidex[8];
 	vector<Genimon> historique;

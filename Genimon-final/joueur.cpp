@@ -1,9 +1,21 @@
 #include "joueur.h"
+#include <QDebug>
 
-Joueur::Joueur(int x0, int y0)
+Joueur::Joueur(int x0, int y0, QWidget* parent)
 {
     initialiserJoueur(x0, y0);
     creerTerrain();
+
+    imageJoueur.load(":/Chimie/Image_Qt/Chimie/Erlenmeyer_test.jpg"); //chemin image, pas le bon live
+
+    spriteJoueur = new QLabel(parent);
+    spriteJoueur->setPixmap(imageJoueur);
+    spriteJoueur->setScaledContents(true);
+    spriteJoueur->resize(32, 32); //taille image
+
+    //init position
+    spriteJoueur->move(position_x * 32, position_y * 32); //selon taille
+    spriteJoueur->show();
 }
 
 Joueur::~Joueur()
@@ -27,6 +39,20 @@ void Joueur::initialiserJoueur(int pos_x, int pos_y)
     nbGenimonAttrapes = 0;
     nbBalles = 20;
     nbCapsuleGuerison = 0;
+}
+
+void Joueur::deplacerJoueur(char direction)
+{
+    anciennePosition_x = position_x;
+    anciennePosition_y = position_y;
+
+    if (direction == 'w' && position_y > 0) position_y--; //haut
+    else if (direction == 's' && position_y < 20) position_y++; //bas
+    else if (direction == 'a' && position_x > 0) position_x--; //gauche
+    else if (direction == 'd' && position_x < 36) position_x++; //droite
+
+    //deplacement image
+    spriteJoueur->move(position_x * 32, position_y * 32);
 }
 
 void Joueur::choisirStarter()

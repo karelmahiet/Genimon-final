@@ -150,7 +150,7 @@
   <ItemGroup>
     <ClInclude Include="genimon.h" />
     <ClInclude Include="gestionJeu.h" />
-    <ClInclude Include="joueur.h" />
+    <QtMoc Include="joueur.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="SerialPort.hpp" />
     <ClInclude Include="unistd.h" />

@@ -3,6 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_Genimonfinal.h"
 
+
 class Genimonfinal : public QMainWindow
 {
     Q_OBJECT
