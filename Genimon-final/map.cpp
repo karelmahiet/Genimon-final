@@ -14,7 +14,7 @@ Map::Map(QWidget* parent)
     ui->setupUi(this);
 
     // Création du bonhomme (cone.png)
-    Joueur *joueur = new Joueur(5, 5, this);
+    joueur = new Joueur(5, 5, this);
     QPixmap sprite(":/Image_Qt/Chimie/Erlenmeyer_test.jpg");  // assure-toi que le .qrc contient cette ressource
     joueur->setPixmap(sprite.scaled(32, 32, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     joueur->setGeometry(joueurX, joueurY, 32, 32);
@@ -34,6 +34,8 @@ void Map::handleKeyPress(int key) {
 }
 
 void Map::keyPressEvent(QKeyEvent* event) {
+    if (!joueur) return; // protection anti crash
+
     int step = 10;
 
     switch (event->key()) {
