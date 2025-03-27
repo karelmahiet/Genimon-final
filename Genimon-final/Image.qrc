@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/Bio">
+        <file>Image_Qt/Bio/virus_test.png</file>
+    </qresource>
+    <qresource prefix="/Chimie">
+        <file>Image_Qt/Chimie/Erlenmeyer_test.jpg</file>
+    </qresource>
+    <qresource prefix="/Civil">
+        <file>Image_Qt/Civil/coneOrange_test.png</file>
+    </qresource>
+    <qresource prefix="/Decor">
+        <file>Image_Qt/Decor/Transition combat.png</file>
+        <file>Image_Qt/Decor/Faculte genie.png</file>
+        <file>Image_Qt/Decor/5a8.png</file>
+        <file>Image_Qt/Decor/AreneCombat.png</file>
+        <file>Image_Qt/Decor/Livre2D_V2.png</file>
+    </qresource>
+    <qresource prefix="/MainMenu">
+        <file>Image_Qt/EcranAccueil/1000_F_825549239_sad5hwkkkyoQBdFxDdeIGTZzDc0Ktlv1.jpg</file>
+        <file>Image_Qt/EcranAccueil/pixel-art-sky-background-with-clouds-cloudy-blue-sky-for-8bit-game-on-white-background-vector.jpg</file>
+    </qresource>
+    <qresource prefix="/Elec">
+        <file>Image_Qt/Elec/pcb_test.png</file>
+    </qresource>
+    <qresource prefix="/Mec">
+        <file>Image_Qt/Mec/Gear_test.jpg</file>
+        <file>Image_Qt/Mec/gear_test2.png</file>
+    </qresource>
+    <qresource prefix="/Info">
+        <file>Image_Qt/Info/ecran_test.jpg</file>
+    </qresource>
+    <qresource prefix="/Robot">
+        <file>Image_Qt/Robot/robot_test.png</file>
+    </qresource>
+    <qresource prefix="/Batiment">
+        <file>Image_Qt/Batiment/murBrique_test.png</file>
+    </qresource>
+</RCC>
